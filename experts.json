@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "image":"images/experts/john.jpg",
+        "name":"John Doe",
+        "email":"jdoe@gmail.com",
+        "phone":"555-555-5555",
+        "occupation":"Agronomist"
+    },
+    {
+        "id":2,
+        "image":"images/experts/mary.jpeg",
+        "name":"Maria Oyiede",
+        "email":"moyiede@gmail.com",
+        "phone":"555-555-5555",
+        "occupation":"Horticulturist"
+    },
+    {
+        "id":3,
+        "image":"images/experts/boima.jpg",
+        "name":"Boima Kanneh",
+        "email":"bkanneh@gmail.com",
+        "phone":"555-555-5555",
+        "occupation":"Livestock Nutritionist"
+    },
+    {
+        "id":4,
+        "image":"images/experts/Reny.webp",
+        "name":"Reny Temi",
+        "email":"rtemi@gmail.com",
+        "phone":"555-555-5555",
+        "occupation":"Agricultural Extension Officer"
+    },
+    {
+        "id":5,
+        "image":"images/experts/anisa.jpg",
+        "name":"Anisa Demoraa",
+        "email":"ademoraa@yahoo.com",
+        "phone":"555-555-5555",
+        "occupation":"Precision Agriculture Specialist:"
+    }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farm Machine Booking</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Farm Machine Booking</h1>
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Machines"
+        oninput="filterMachines()"
+      />
+    </header>
+    <main>
+      <section id="machineList">
+        <!-- Machines will be dynamically loaded here -->
+      </section>
+      <section>
+        <form id="bookingForm" action="../app.py">
+          <label for="machine_id">Select Machine:</label>
+          <select name="machine_id" id="machineSelect" required>
+            <option value="" disabled selected>Select Machine</option>
+          </select>
+
+          <label for="name">Your Name:</label>
+          <input type="text" name="name" placeholder="Your Name" required />
+
+          <label for="email">Your Email:</label>
+          <input type="email" name="email" placeholder="Your Email" required />
+
+          <label for="id">Your ID:</label>
+          <input type="text" name="id" placeholder="Your ID" required />
+
+          <label for="bookingTime">Booking Time:</label>
+          <input type="date" name="bookingTime" required />
+
+          <button type="submit">Book Machine</button>
+        </form>
+      </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,474 @@
+body{
+    margin: 0;
+    font-family: Poppins;
+    padding-bottom: 20px;  
+}
+.container{
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 70px;
+    transition: transform .5s;
+}
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.icon-cart{
+    position: relative;
+    cursor: pointer;
+}
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    right: -20px;
+}
+.title{
+    font-size: xx-large;
+}
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 px 20px #0009);
+}
+
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listProduct .item{
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/* cart */
+.cartTab{
+    width: 400px;
+    background-color: #aeaba5;
+    color: black;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .cartTab{
+    right: 0;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .close{
+    background-color: #eee;
+}
+.listCart .item img{
+    width: 100%;
+}
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.listCart .remove {
+    cursor: pointer;
+    color: #fff;
+    background-color: #e74c3c;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.listCart .remove:hover {
+    background-color: #c0392b;
+}
+
+
+.order-summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: none;
+}
+
+.order-summary h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.summary-item span {
+    font-size: 16px;
+    color: #555;
+}
+
+#totalPrice,
+#totalDiscount,
+#finalPrice {
+    font-weight: bold;
+    color: #e44d26; 
+}
+
+
+#purchaseButton {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#purchaseButton:hover {
+    background-color: #45a049;
+}
+
+
+.quantityInput {
+    width: 50px; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+
+.product-name {
+    font-size: 200px;
+    font-weight: 900;
+
+}
+
+div > h1,
+div > h2,
+div > h3 {
+  color: #333; 
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border: 1px solid #ddd; 
+  padding: 10px;
+  border-radius: 8px; 
+}
+
+.payment > div {
+  flex: 1;
+}
+
+.payment div > p {
+  margin: 0; 
+}
+
+.payment div .total-cost {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment div .amount {
+  color: #e44d26; 
+  font-weight: bold;
+}
+
+
+
+input[type="upload"] {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
+div > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+div > ul > li {
+  margin-bottom: 5px;
+  color: #555; /* Set text color */
+}
+
+
+
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+/* Add this CSS code to your existing style.css or create a new file */
+.product-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+  }
+  
+  .close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/* Add this CSS to your style.css file */
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0; /* Initial opacity for fade-in effect */
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .info {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .success {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  .warning {
+    background-color: #e67e22;
+    color: #fff;
+  }
+
+/* Update your CSS file */
+
+/* Add this CSS to your style.css file */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+  
+.user-profile svg {
+    margin-right: 8px;
+}
+  
+.user-profile span {
+    font-weight: bold;
+    margin-right: 20px;
+}
+  
+  /* Rest of your existing CSS */
+  
+/* Add this to your existing CSS or create a new style.css file */
+body.showProfile {
+    overflow: hidden; /* This prevents scrolling when the profile is shown */
+  }
+  
+  .user-profile {
+    /* Your user profile styles go here */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+  }
+
+  .menu-content a {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .menu-content.show {
+    display: block;
+  }
+  
+
+  .expert-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+}
+
+.expert-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.expert-card h2 {
+    margin-bottom: 5px;
+}
+
+.expert-card p {
+    margin: 0;
+}
+     
+
+@media only screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

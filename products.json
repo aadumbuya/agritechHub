@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "apples",
+    "price": 400,
+    "image": "images/apples.webp",
+    "producer": "Polist"
+  },
+  {
+    "id": 2,
+    "name": "tomatoes",
+    "price": 1000,
+    "image": "images/tomato1.jpg",
+    "producer": "Greezy"
+  },
+  {
+    "id": 3,
+    "name": "rice",
+    "price": 700,
+    "image": "images/rice.jpg",
+    "producer": "Troy"
+  },
+  {
+    "id": 4,
+    "name": "sweet patatoes",
+    "price": 500,
+    "image": "images/sweet patatoes.jpg",
+    "producer": "Troy"
+  },
+  {
+    "id": 5,
+    "name": "carrots",
+    "price": 500,
+    "image": "images/carrots.jpg",
+    "producer": "Reaper"
+  },
+  {
+    "id": 6,
+    "name": "mushroom",
+    "price": 800,
+    "image": "images/mushrooms.jpg",
+    "producer": "Polist"
+  },
+  {
+    "id": 7,
+    "name": "maize",
+    "price": 600,
+    "image": "images/maize.jpg",
+    "producer": "Reaper"
+  },
+  {
+    "id": 8,
+    "name": "coffee",
+    "price": 1200,
+    "image": "images/coffee.webp",
+    "produce": "Greezy"
+  },
+  {
+    "id": 9,
+    "name": "beans",
+    "price": 500,
+    "image": "images/beans.jpg",
+    "producer": "Suera"
+  },
+  {
+    "id": 10,
+    "name": "cabbage",
+    "price": 500,
+    "image": "images/cabbage.jpeg",
+    "producer": "Suera"
+  },
+  {
+    "id": 11,
+    "name": "onions",
+    "price": 500,
+    "image": "images/onions.jpeg",
+    "producer": "Suera"
+  },
+  {
+    "id": 12,
+    "name": "mangoes",
+    "price": 500,
+    "image": "images/mango.jpeg",
+    "producer": "Gnome"
+  },
+  {
+    "id": 13,
+    "name": "oranges",
+    "price": 500,
+    "image": "images/oranges.jpg",
+    "producer": "Gnome"
+  },
+  {
+    "id": 14,
+    "name": "pineapples",
+    "price": 500,
+    "image": "images/pineapple.jpeg",
+    "producer": "Gnome"
+  },
+  {
+    "id": 15,
+    "name": "watermelon",
+    "price": 500,
+    "image": "images/watermelon.jpeg",
+    "producer": "Lois"
+  },
+  {
+    "id": 16,
+    "name": "avocado",
+    "price": 500,
+    "image": "images/avocado.jpg",
+    "producer": "Lois"
+  },
+  {
+    "id": 17,
+    "name": "cucumber",
+    "price": 500,
+    "image": "images/cucumber.jpg",
+    "producer": "Stormy"
+  },
+  {
+    "id": 18,
+    "name": "lemon",
+    "price": 500,
+    "image": "images/lemons.jpeg",
+    "producer": "Stormy"
+  },
+  {
+    "name": "Grapes",
+    "price": 120,
+    "image": "images/grapes.jpg",
+    "producer": "Great Farm"
+  },
+  {
+    "name": "Milk",
+    "price": 100,
+    "image": "images/milk.jpeg",
+    "producer": "Troy Farms"
+  },
+  {
+    "name": "Cherries",
+    "price": 150,
+    "image": "images/cherry.jpeg",
+    "producer": "Front Farms"
+  }
+]
