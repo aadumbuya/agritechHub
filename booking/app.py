@@ -1,6 +1,14 @@
 from flask import Flask, request, jsonify, render_template
 from models import db, Machine, Booking
 from datetime import datetime
+import mysql.connector
+
+dbs = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Ramires7896",
+    database="alhassandb"
+)
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///farm_management.db'
@@ -13,10 +21,10 @@ def create_tables():
     # Check if the Machine table is empty and insert sample data
     if Machine.query.count() == 0:
         sample_machines = [
-            Machine(name='Tractor', description='Versatile farm machine for various tasks.',image='trac.jpg'),
-            Machine(name='Harvester', description='Efficient for harvesting crops quickly.', image='trac.jpg'),
-            Machine(name='Plough', description='Essential for preparing the land for planting.', image='trac.jpg'),
-            Machine(name='Sprayer', description='Used for applying liquid substances to crops.', image='trac.jpg')
+            Machine(name='Tractor', description='Versatile farm machine for various tasks.'),
+            Machine(name='Harvester', description='Efficient for harvesting crops quickly.'),
+            Machine(name='Plough', description='Essential for preparing the land for planting.'),
+            Machine(name='Sprayer', description='Used for applying liquid substances to crops.')
         ]
         db.session.bulk_save_objects(sample_machines)
         db.session.commit()
@@ -34,6 +42,23 @@ def get_machines():
 @app.route('/api/book', methods=['POST'])
 def book_machine():
     data = request.json
+    
+    if request == "POST":
+        machine = request.form['machine']
+        name = request.form['name']
+        email = request.form['email']
+        id = request.form['id']
+        date = request.form['bookingTime']
+
+        cursor = dbs.cursor()
+        sql = "INSERT INTO booking (machine, name, email, id, date) VALUES (%s, %s, %s, %s, %s)"
+        cursor.execute(sql, (machine, name, email, id, date))
+        dbs.commit()
+        cursor.close()
+        return render_template('index.html')
+    
+    return render_template('index.html')
+    """
     existing_booking = Booking.query.filter_by(machine_id=data['machine_id'], booking_date=data['booking_date']).first()
     if existing_booking:
         return jsonify({'error': 'Machine already booked for this date'}), 400
@@ -48,6 +73,7 @@ def book_machine():
     db.session.add(booking)
     db.session.commit()
     return jsonify({'success': 'Booking confirmed'}), 201
+    """
 
 if __name__ == '__main__':
     app.run(debug=True)

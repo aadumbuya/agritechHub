@@ -5,11 +5,23 @@
     <title>Farm Machine Booking</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="../static/style.css"
     />
+    <link rel="stylesheet" href="../../styles/style.css" />
   </head>
   <body>
     <header>
+        <button id="menuButton">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+          <div id="menuContent" class="menu-content">
+            <a href="../../index.html">Home</a>
+            <a href="../../experts.html">Experts</a>
+            <a href="../../weather/weather.html">Weather</a>
+            <a href="./booking/templates/index.html">Booking</a>
+          </div>
       <h1>Farm Machine Booking</h1>
       <input
         type="text"
@@ -23,7 +35,7 @@
         <!-- Machines will be dynamically loaded here -->
       </section>
       <section>
-        <form id="bookingForm" action="../app.py">
+        <form id="bookingForm" action="/">
           <label for="machine_id">Select Machine:</label>
           <select name="machine_id" id="machineSelect" required>
             <option value="" disabled selected>Select Machine</option>
