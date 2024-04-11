@@ -57,10 +57,19 @@
           <label for="bookingTime">Booking Time:</label>
           <input type="date" name="bookingTime" required />
 
-          <button type="submit">Book Machine</button>
+          <button type="submit" onclick="addBooking()">Book Machine</button>
         </form>
       </section>
+      <div class="confirm"></div>
     </main>
+    <script>
+      function addBooking() {
+        const block = document.getElementsByClassName('confirm');
+        blockText = document.createElement('p');
+        blockText.innerHTML = 'Booking successful';
+        block.appendChild(blockText);
+    }
+    </script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>
